@@ -1,9 +1,9 @@
 class Question {
-   constructor (text, choices, answer){
-    this.text = text;
-    this.choices = choices;
-    this.answer = answer;
-}
+    constructor (text, choices, answer){
+        this.text = text;
+        this.choices = choices;
+        this.answer = answer;
+    }
 }
 
 var questions = [
@@ -12,4 +12,13 @@ var questions = [
     new Question("What has not been covered in PUI lab?", ["HTML", "CSS","Javascript", "Java"], "Java"),
 ];
 
+new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML")
+
+class Quiz {
+    constructor(questions) {
+        this.score = 0;
+        this.questions = questions;
+        this.questionIndex = 0;
+    }
+}
 
