@@ -4,6 +4,13 @@ class Question {
         this.choices = choices;
         this.answer = answer;
     }
+    guess(answer) {
+        if(this.getQuestion().isCorrectAnswer(answer)) {
+            this.score++;
+        }
+
+        this.questionIndex++;
+    }
 }
 
 var questions = [
@@ -14,11 +21,32 @@ var questions = [
 
 new Question("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML","CSS", "HTML"], "HTML")
 
+
 class Quiz {
     constructor(questions) {
         this.score = 0;
         this.questions = questions;
         this.questionIndex = 0;
     }
+    getQuestion() {
+
+    return this.questions[this.questionIndex];
+
+    }
+
 }
+
+isCorrectAnswer(choice){
+    return this.answer === choice;
+}
+
+
+
+function guess(id, guess) {
+    var button = document.getElementById(id);
+    button.onclick = function() {
+     quiz.guess(guess);
+     populate();
+    }
+};
 
