@@ -21,7 +21,7 @@ a:hover {
     color: #FF8987;
 }
 
-.header a.active {
+a.active {
     color: #FF8987;
     border-bottom: 2px solid #FF8987;
 }
