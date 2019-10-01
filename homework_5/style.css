@@ -104,7 +104,35 @@ a {
     color: black;
 }
 
+.flavor-container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-gap: 30px;
+    grid-row-gap: 0px;
+    margin-top: 44px;
+    align-content: center;
+    justify-content: center;
+    grid-auto-rows: 500px;
+    align-items: stretch;
+    grid-auto-flow: row;
+}
 
+.flavor-container a{
+    font-size: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    overflow:hidden;
+    border: 1px solid #FF8987;
+}
+
+.product-item img.active {
+    border: 5px solid #FF8987;
+}
 
 /*.product-container {
     display: grid;
