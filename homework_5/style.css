@@ -1,0 +1,107 @@
+.header {
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 10px 5px;
+    border-bottom: 1px solid #ECAD5F;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+
+/* Change the link color on hover*/
+.navbar a:hover {
+    color: #FF8987;
+}
+
+.header a.active {
+    color: #FF8987;
+    border-bottom: 2px solid #FF8987;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 50px;
+}
+
+.navbar a{
+  float: center;
+  margin: 50px 75px 10px;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    background-color: white;
+    margin: 0px 0px;
+    font-family: 'Zilla Slab', serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    text-align: center;
+    padding: 0px 100px;
+    font-size: 30px;
+}
+
+
+.transparent {
+    background-color: #ffffff;
+    opacity: 0.6;
+    padding: 50px;
+    margin: 30px 100px;
+}
+
+
+/*style the navbar*/
+/*header {
+    border-bottom: 1px solid #ECAD5F;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+}
+
+header a{
+    text-decoration: none;
+    display: block;
+}
+
+.nav {
+    list-style-type: none;
+    overflow: hidden;
+}*/
+
+/*Make navbar horizontal*/
+/*li {
+    float: left;
+}
+
+.nav a {
+    display: block;
+    text-align: center;
+    padding: 50px 75px 10px;
+}*/
+
+/* Change the link color on hover*/
+/*li a:hover {
+    color: #FF8987;
+}*/
+
+
+
