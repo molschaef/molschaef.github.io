@@ -1,3 +1,4 @@
+/*header style*/
 .header {
     overflow: hidden;
     background-color: white;
@@ -5,6 +6,7 @@
     border-bottom: 1px solid #ECAD5F;
 }
 
+/*header link style*/
 .header a {
     float: left;
     color: black;
@@ -16,66 +18,78 @@
     border-radius: 3px;
 }
 
-/* Change the link color on hover*/
+/* Change link color on hover*/
 a:hover {
     color: #FF8987;
 }
 
+/*When links are active change the color and add a border
+This applies to the navbar*/
 a.active {
     color: #FF8987;
     border-bottom: 2px solid #FF8987;
 }
 
+/*logo style in the header*/
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
     margin: 0px 50px;
 }
 
+/*navigation menu link style*/
 .navbar a{
   float: center;
   margin: 50px 75px 10px;
 }
 
+/*body style*/
 body {
     margin: 0px 0px;
     font-family: 'Zilla Slab', serif;
 }
 
+/*style for header1 text*/
 h1 {
     text-align: center;
     font-size: 100px;
 }
 
+/*style for header2 text*/
 h2 {
     text-align: center;
     font-size: 50px;
     margin: 20px 100px;
 }
 
+/*style for header1 text that is also a link*/
 h1 a {
     text-decoration: none;
     color: black;
 }
 
+/*style for header3 text*/
 h3 {
     text-align: center;
     padding: 0px 100px;
     font-size: 25px;
 }
 
-
+/*style for the transparent boxes behind the text on the home page*/
 .transparent {
     background-color: #ffffff90;
     padding: 50px;
     margin: 30px 100px;
 }
 
+/*background style for the homepage
+(will be reused for contact and our story pages when they are implemented)*/
 .homebody {
     background-image: url(https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
     background-color: white;
 }
 
+/*grid on the shop/browse page that contains the images and the flavor text*/
 .product-container {
     display: grid;
     grid-template-columns: 250px 250px 250px;
@@ -89,21 +103,25 @@ h3 {
     grid-auto-flow: row;
 }
 
+/*images on the shop/browse page*/
 .product-item img {
     width: 100%;
     height: auto;
     overflow:hidden;
 }
 
+/*any paragraph text will have this style*/
 p {
     font-size: 20px;
 }
 
+/*every link will follow this style*/
 a {
     text-decoration: none;
     color: black;
 }
 
+/*the flavor grid at the top of the product details pages*/
 .flavor-container {
     display: grid;
     grid-template-columns: 150px 150px 150px 150px 150px 150px;
@@ -118,11 +136,13 @@ a {
     grid-auto-flow: row;
 }
 
+/*links in the flavor grid on the product page have smaller font size and aligned to the center*/
 .flavor-container a{
     font-size: 10px;
     text-align: center;
 }
 
+/*images in the flavor grid on the shop/browse page and product details pages will follow the same style*/
 .product-item img {
     width: 100%;
     height: auto;
@@ -130,26 +150,32 @@ a {
     border: 1px solid #FF8987;
 }
 
+/*the selected flavor on the product details page will have a different border from the unselected flavors*/
 .product-item img.active {
     border: 5px solid #FF8987;
 }
 
-/*.product-container {
+/*back to shop button on the product dertails page*/
+.back {
+  padding: 0px 300px;
+  margin: 0px;
+}
+
+.prod-details {
     display: grid;
-    grid-gap: 10px 20px;
-    grid-template-columns: auto auto auto;
-    align-content: center;
-    margin: 0px 100px;
+    grid-template-columns: 50% 50%;
+    margin: 44px 300px;
+    grid-gap: 30px;
 }
 
-.product-item {
-    max-width: 100%;
-    height: auto;
-    text-align: center;
+.prod-details img {
+    width: 100%;
 }
 
-
-}*/
+.dropdown {
+    padding: 100px;
+    font-size: 30px;
+}
 
 
 
