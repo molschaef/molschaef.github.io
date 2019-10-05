@@ -124,22 +124,23 @@ a {
 /*the flavor grid at the top of the product details pages*/
 .flavor-container {
     display: grid;
-    grid-template-columns: 150px 150px 150px 150px 150px 150px;
+    grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 30px;
     grid-row-gap: 0px;
-    margin-top: 44px;
     align-content: center;
     justify-content: center;
     grid-auto-rows: 500px;
     align-items: stretch;
     grid-auto-flow: row;
+    margin: 44px 300px 0px;
 }
 
 /*links in the flavor grid on the product page have smaller font size and aligned to the center*/
 .flavor-container a{
     font-size: 10px;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 /*images in the flavor grid on the shop/browse page and product details pages will follow the same style*/
@@ -148,11 +149,13 @@ a {
     height: auto;
     overflow:hidden;
     border: 1px solid #FF8987;
+    margin-bottom: 0px;
 }
 
 /*the selected flavor on the product details page will have a different border from the unselected flavors*/
 .product-item img.active {
     border: 5px solid #FF8987;
+    margin-bottom: 0px;
 }
 
 /*back to shop button on the product dertails page*/
@@ -161,6 +164,7 @@ a {
   margin: 0px;
 }
 
+/*grid for product details*/
 .prod-details {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -168,14 +172,40 @@ a {
     grid-gap: 30px;
 }
 
+/*large image of selected flavor*/
 .prod-details img {
     width: 100%;
 }
 
+/*style the dropdown options on the details page*/
 .dropdown {
-    padding: 100px;
-    font-size: 30px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
 }
 
+/*style the product description on the details page*/
+.prod-descrip {
+    margin: 0px;
+    padding left: 10px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
 
+.prod-descrip p {
+    font-size: 20px;
+}
 
+/*button style*/
+button {
+    background-color: #8FD5E0;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Zilla Slab', serif;
+    margin-left: 300px;
+}
