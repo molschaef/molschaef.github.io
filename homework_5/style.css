@@ -39,8 +39,8 @@ a.active {
 
 /*navigation menu link style*/
 .navbar a{
-  float: center;
-  margin: 50px 75px 10px;
+    /*  float: center;*/
+    margin: 50px 75px 10px;
 }
 
 /*body style*/
@@ -187,7 +187,7 @@ a {
 /*style the product description on the details page*/
 .prod-descrip {
     margin: 0px;
-    padding left: 10px;
+/*    padding left: 10px;*/
     font-size: 30px;
     padding-bottom: 20px;
 }
