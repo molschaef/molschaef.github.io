@@ -113,6 +113,8 @@ h3 {
 /*any paragraph text will have this style*/
 p {
     font-size: 20px;
+    padding: 0px;
+    margin: 0px;
 }
 
 /*every link will follow this style*/
@@ -133,7 +135,7 @@ a {
     grid-auto-rows: 500px;
     align-items: stretch;
     grid-auto-flow: row;
-    margin: 44px 300px 0px;
+    margin: 44px 200px 0px;
 }
 
 /*links in the flavor grid on the product page have smaller font size and aligned to the center*/
@@ -149,7 +151,8 @@ a {
     height: auto;
     overflow:hidden;
     border: 1px solid #FF8987;
-    margin-bottom: 0px;
+    margin: 0px;
+    align-content: center;
 }
 
 /*the selected flavor on the product details page will have a different border from the unselected flavors*/
@@ -160,7 +163,7 @@ a {
 
 /*back to shop button on the product dertails page*/
 .back {
-  padding: 0px 300px;
+  padding: 0px 200px;
   margin: 0px;
 }
 
@@ -168,7 +171,7 @@ a {
 .prod-details {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 44px 300px;
+    margin: 44px 200px;
     grid-gap: 30px;
 }
 
