@@ -195,6 +195,7 @@ a {
 
 .product-item img:hover {
     filter: grayscale(0%);
+    border: 5px solid #FF8987;
 }
 
 .product-name {
