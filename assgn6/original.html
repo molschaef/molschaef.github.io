@@ -8,8 +8,6 @@
         <script src="main.js"></script>
     </head>
     <body>
-
-
         <!-- Header and navigation bar -->
         <div class="header">
           <a href="index.html" class="logo">Bun Bun Bake Shop</a>
@@ -24,47 +22,46 @@
           </div>
           <div class = "cartQuant"><a href="cart.html">2</a></div>
         </div>
-
         <div class = "back">
             <a href="shop.html"><p>&lt; Back to Shop</p></a>
         </div>
         <!-- Grid for the flavors at the top of the page -->
         <div class = "flavor-container">
             <div class="product-item">
-                <a href="original.html"><img src ="https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class = "active" alt="Original"></a>
+                <img src ="https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"  alt="Original" id="og" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
-                <a href="blackberry.html"><img src ="https://images.unsplash.com/photo-1511459241548-45c3ca4e07a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Blackberry"></a>
+                <img src ="https://images.unsplash.com/photo-1511459241548-45c3ca4e07a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Blackberry" id="blackberry" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
-                <a href="walnut.html"><img src ="https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80" alt="Walnut"></a>
+                <img src ="https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80" alt="Walnut" id="walnut" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
-                <a href="gf.html"><img src ="https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="The Original (Gluten Free)"></a>
+                <img src ="https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="The Original (Gluten Free)" id="oggf" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
-                <a href="pumpkin.html"><img src ="https://images.unsplash.com/photo-1483288578299-bdb6421dee2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80" alt="Pumpkin Spice"></a>
+                <img src ="https://images.unsplash.com/photo-1483288578299-bdb6421dee2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80" alt="Pumpkin Spice" id="pumpkin" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
-                <a href="caramel.html"><img src ="https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Caramel Pecan"></a>
+                <img src ="https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Caramel Pecan" id="caramel" onclick="updateProdDetails(this); return false;"></a>
             </div>
             <div class = "product-name">
-                <a href="original.html" class = "active"><p>The Original</p></a>
+                <a href="original.html" id="og2" onclick="updateProdDetails(this); return false;"><p>The Original</p></a>
             </div>
             <div class = "product-name">
-                <a href="blackberry.html"><p>Blackberry</p></a>
+                <a href="blackberry.html" id="blackberry2" onclick="updateProdDetails(this); return false;"><p>Blackberry</p></a>
             </div>
             <div class = "product-name">
-                <a href="walnut.html"><p>Walnut</p></a>
+                <a href="walnut.html" id="walnut2" onclick="updateProdDetails(this); return false;"><p>Walnut</p></a>
             </div>
             <div class = "product-name">
-                <a href="gf.html"><p>The Original (Gluten Free)</p></a>
+                <a href="gf.html" id="oggf2" onclick="updateProdDetails(this); return false;"><p>The Original (Gluten Free)</p></a>
             </div>
             <div class = "product-name">
-                <a href="pumpkin.html"><p>Pumpkin Spice</p></a>
+                <a href="pumpkin.html" id="pumpkin2" onclick="updateProdDetails(this); return false;"><p>Pumpkin Spice</p></a>
             </div>
             <div class = "product-name">
-                <a href="caramel.html"><p>Caramel Pecan</p></a>
+                <a href="caramel.html" id="caramel2" onclick="updateProdDetails(this); return false;"><p>Caramel Pecan</p></a>
             </div>
         </div>
             <!-- Grid for the product details on the bottom -->
@@ -74,9 +71,9 @@
                 </div>
                 <div>
                     <div class = "prod-descrip">
-                        The Original<br />
-                        <p>Total: $7.00</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <div id = "prodName">The Original</div>
+                        <div id="prodPrice">Total: $7.00</div>
+                        <div id="prodDescrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                     </div>
                     <div class = "dropdown">
                         Glaze:
@@ -99,7 +96,5 @@
                     </div>
                 </div>
             </div>
-
     </body>
-
 </html>
