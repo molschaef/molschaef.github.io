@@ -36,6 +36,7 @@ function updateProdDetails(element) {
         document.getElementById("oggf2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("pumpkin2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("caramel2").className = document.getElementById("blackberry").className.replace("active", "");
+        document.getElementById("prodImg").src = og.imgUrl;
     } else if (element.id == "blackberry" || element.id == "blackberry2") { // if blackberry clicked then update information and set blackberry to active and set all other products to inactive
         document.getElementById("prodName").innerHTML = blackberry.flavor;
         document.getElementById("prodPrice").innerHTML = blackberry.price;
@@ -52,6 +53,7 @@ function updateProdDetails(element) {
         document.getElementById("oggf2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("pumpkin2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("caramel2").className = document.getElementById("blackberry").className.replace("active", "");
+        document.getElementById("prodImg").src = blackberry.imgUrl;
     } else if (element.id == "walnut" || element.id == "walnut2") { // if walnut clicked then update information and set walnut to active and set all other products to inactive
         document.getElementById("prodName").innerHTML = walnut.flavor;
         document.getElementById("prodPrice").innerHTML = walnut.price;
@@ -68,6 +70,7 @@ function updateProdDetails(element) {
         document.getElementById("oggf2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("pumpkin2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("caramel2").className = document.getElementById("blackberry").className.replace("active", "");
+        document.getElementById("prodImg").src = walnut.imgUrl;
     } else if (element.id == "oggf" || element.id == "oggf2") { // if original GF clicked then update information and set original GF to active and set all other products to inactive
         document.getElementById("prodName").innerHTML = oggf.flavor;
         document.getElementById("prodPrice").innerHTML = oggf.price;
@@ -84,6 +87,7 @@ function updateProdDetails(element) {
         document.getElementById("blackberry2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("pumpkin2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("caramel2").className = document.getElementById("blackberry").className.replace("active", "");
+        document.getElementById("prodImg").src = oggf.imgUrl;
     } else if (element.id == "pumpkin" || element.id == "pumpkin2") { // if pumpkin clicked then update information and set pumpkin to active and set all other products to inactive
         document.getElementById("prodName").innerHTML = pumpkin.flavor;
         document.getElementById("prodPrice").innerHTML = pumpkin.price;
@@ -100,6 +104,7 @@ function updateProdDetails(element) {
         document.getElementById("oggf2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("blackberry2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("caramel2").className = document.getElementById("blackberry").className.replace("active", "");
+        document.getElementById("prodImg").src = pumpkin.imgUrl;
     } else if (element.id == "caramel" || element.id == "caramel2") { // if caramel clicked then update information and set caramel to active and set all other products to inactive
         document.getElementById("prodName").innerHTML = caramel.flavor;
         document.getElementById("prodPrice").innerHTML = caramel.price;
@@ -116,5 +121,45 @@ function updateProdDetails(element) {
         document.getElementById("oggf2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("pumpkin2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("blackberry2").className = document.getElementById("blackberry").className.replace("active", "");
+        document.getElementById("prodImg").src = caramel.imgUrl;
     }
 };
+
+// update the details based on glaze selected
+function getSelectedGlaze (glazeId) {
+    var selected = document.getElementById(glazeId).value;
+    document.getElementById("glazeDisplay").innerHTML = "Glaze: " + selected;
+};
+
+// update details based on quantity selected
+function getSelectedQuantity (quantId) {
+    var selected = document.getElementById(quantId).value;
+    document.getElementById("quantDisplay").innerHTML = "Quantity: " + selected;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
