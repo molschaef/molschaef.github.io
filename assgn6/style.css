@@ -183,12 +183,18 @@ a {
     border: 1px solid #FF8987;
     margin: 0px;
     align-content: center;
+    filter: grayscale(100%);
 }
 
 /*the selected flavor on the product details page will have a different border from the unselected flavors*/
 .product-item img.active {
     border: 5px solid #FF8987;
     margin-bottom: 0px;
+    filter: grayscale(0%);
+}
+
+.product-item img:hover {
+    filter: grayscale(0%);
 }
 
 .product-name {

@@ -3,7 +3,7 @@ function Roll(flavor, price, description, imgUrl){
     this.price = price,
     this.description = description,
     this.imgUrl = imgUrl
-}
+};
 
 var og = new Roll("The Original", "Total: $7.00", "Our original recipe!", "https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
 
@@ -117,5 +117,4 @@ function updateProdDetails(element) {
         document.getElementById("pumpkin2").className = document.getElementById("blackberry").className.replace("active", "");
         document.getElementById("blackberry2").className = document.getElementById("blackberry").className.replace("active", "");
     }
-
-}
+};
