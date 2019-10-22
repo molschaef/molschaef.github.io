@@ -7,4 +7,4 @@ On the product details page (molschaef.github.io/assgn6/original.html):
 -When quantity is selected from the dropdown, that quantity is shown in the text below the drop down menus.
 -When the user adds an item to their cart by clicking the button, Add to Cart, it updates the cart quantity. This cart quantity is displayed in the pink circle next to the cart icon in the upper right-hand corner of the page.
 
-Please find my low-fidelity prototype and high-fidelity prototype here:
+Please find my low-fidelity prototype and high-fidelity prototype in this folder in the file, "Assignment 6A Schaefer.pdf" or by going to this link: https://github.com/molschaef/molschaef.github.io/blob/master/assgn6/Assignment%206A%20Schaefer.pdf
