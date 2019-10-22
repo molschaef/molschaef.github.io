@@ -20,7 +20,7 @@
           <div class="cart">
             <a href="cart.html"><img src="Cart.png"></a>
           </div>
-          <div class = "cartQuant"><a href="cart.html">0</a></div>
+          <div id = "cartQuant">0</div>
         </div>
         <div class = "back">
             <a href="shop.html"><p>&lt; Back to Shop</p></a>
@@ -40,7 +40,7 @@
                 <img src ="https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80" alt="Walnut" id="walnut" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
-                <a href="gf.html" id="oggf2" onclick="updateProdDetails(this); return false;"><p>The Original (GF)</p></a>
+                <a href="gf.html" id="oggf2" onclick="updateProdDetails(this); return false;"><p>Original (GF)</p></a>
                 <img src ="https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="The Original (Gluten Free)" id="oggf" onclick="updateProdDetails(this); return false;">
             </div>
             <div class="product-item">
@@ -103,7 +103,7 @@
                         <div id="quantDisplay">Quantity: 1</div>
                     </div>
                     <div>
-                        <a href="cart.html"><button type="button">Add to Cart</button></a>
+                        <!-- <a href="cart.html"> --><button type="button" onclick="addToCart()">Add to Cart</button><!-- </a> -->
                     </div>
                 </div>
             </div>

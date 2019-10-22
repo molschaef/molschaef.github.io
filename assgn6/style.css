@@ -76,6 +76,7 @@ a.active {
 body {
     margin: 0px 0px;
     font-family: 'Zilla Slab', serif;
+    font-size: 20px;
 }
 
 /*style for header1 text*/
@@ -283,19 +284,20 @@ button {
 }
 
 /*style of the cart icon quantity*/
-.cartQuant {
+#cartQuant {
     border-radius: 50%;
     width: 30px;
     height: 30px;
     border-color: #FF8987;
     border-style: solid;
-    color: white;
     display:inline-block;
     float: right;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.cartQuant a {
-    font-size: 25px;
+#cartQuant a {
+    font-size: 20px;
     vertical-align: middle;
     text-align: center;
     padding-left: 7px;
@@ -305,3 +307,27 @@ button {
     float: right;
     margin-right: 50px;
 }
+
+#glaze {
+    background-color: #ecad5f5e;
+    background-position:80% center;
+    width: 150px;
+    height: 25px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 15px;
+    border: 2px solid #8FD5E0;
+}
+
+#quantity {
+    background-color: #ecad5f5e;
+    background-position:80% center;
+    width: 150px;
+    height: 25px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 15px;
+    border: 2px solid #8FD5E0;
+}
+
+
+
+

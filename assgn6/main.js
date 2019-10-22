@@ -17,6 +17,7 @@ var pumpkin = new Roll("Pumpkin Spice", "Total: $10.00", "Spice up fall with Pum
 
 var caramel = new Roll("Caramel Pecan", "Total: $10.00", "Knock Knock!<br> Who's there? <br> Candy! <br> Candy who? <br> Candy Caramel Pecan get any better!?", "https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 
+var cartQuant = 0;
 
 // update the information on the product details page depending on what flavor the customer clicked
 function updateProdDetails(element) {
@@ -137,7 +138,10 @@ function getSelectedQuantity (quantId) {
     document.getElementById("quantDisplay").innerHTML = "Quantity: " + selected;
 };
 
-
+function addToCart() {
+    cartQuant+=1;
+    document.getElementById("cartQuant").innerHTML = cartQuant;
+};
 
 
 
