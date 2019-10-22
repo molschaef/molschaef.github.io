@@ -271,8 +271,8 @@ button {
 /*style of the cart icon quantity*/
 #cartQuant {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-color: #FF8987;
     border-style: solid;
     display:inline-block;
