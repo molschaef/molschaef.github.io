@@ -228,8 +228,8 @@ a {
 
 /*button style*/
 button {
-    background-color: #8FD5E0;
-    border: none;
+    background-color: #8fd5e080;
+    border: 1px solid #8FD5E0;
     color: black;
     padding: 15px 32px;
     text-align: center;
