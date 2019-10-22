@@ -240,6 +240,7 @@ button {
     margin-top: 20px;
 }
 
+/*grid for the cart*/
 .cart-container {
     display: grid;
     grid-template-columns: 25% 25% 10% 10%;
@@ -255,6 +256,7 @@ button {
     /*justify-items: end;*/
 }
 
+/*total price on cart page*/
 #total {
     border-top: 1px solid #ECAD5F;
     column-span: all;
@@ -267,12 +269,14 @@ button {
     overflow:hidden;
 }
 
+/*item in the shopping cart*/
 .cart-item{
     width: 100%;
     height: auto;
     overflow:hidden;
 }
 
+/*links in the shopping cart item (update and remove)*/
 .cart-item a {
     text-decoration: underline;
 }
@@ -290,18 +294,22 @@ button {
     text-align: center;
 }
 
-#cartQuant a {
+/*quantity shown next to the cart icon*/
+/*#cartQuant a {
     font-size: 20px;
     vertical-align: middle;
     text-align: center;
     padding-left: 7px;
-}
+    float: right;
+}*/
 
+/*cart icon at top right of page*/
 .cart {
     float: right;
     margin-right: 50px;
 }
 
+/*style for glaze dropdown menu*/
 #glaze {
     background-color: #ecad5f5e;
     background-position:80% center;
@@ -312,6 +320,7 @@ button {
     border: 2px solid #8FD5E0;
 }
 
+/*style for quantity dropdown menu*/
 #quantity {
     background-color: #ecad5f5e;
     background-position:80% center;
@@ -322,7 +331,7 @@ button {
     border: 2px solid #8FD5E0;
 }
 
-
+/*change cursor when user hovers over a clickable element*/
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer, .flavor-container {
     cursor: pointer;
 }
