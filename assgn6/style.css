@@ -323,5 +323,7 @@ button {
 }
 
 
-
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer, .flavor-container {
+    cursor: pointer;
+}
 
