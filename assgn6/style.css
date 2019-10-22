@@ -16,24 +16,9 @@
     border-top: 1px solid #ECAD5F;
     padding-bottom: 30px;
     background-color: white;
-    padding-top: 30px;
-
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-gap: 20px;
-    align-content: left;
-    justify-content: left;
-    align-items: stretch;
-    grid-auto-flow: row;
-
+    width: 100%;
+    color: white;
 }
-
-.footer div {
-    font-size: 20px;
-    margin-left: 300px;
-}
-
 
 /*header link style*/
 .header a {
