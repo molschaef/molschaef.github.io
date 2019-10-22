@@ -1,3 +1,4 @@
+// Prototype for cinnamon roll
 function Roll(flavor, price, description, imgUrl){
     this.flavor = flavor,
     this.price = price,
@@ -5,18 +6,15 @@ function Roll(flavor, price, description, imgUrl){
     this.imgUrl = imgUrl
 };
 
+// Each flavor cinnamon roll
 var og = new Roll("The Original", "Total: $7.00", "Our original recipe!", "https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-
 var blackberry = new Roll("Blackberry", "Total: $8.00", "Sweet... Tart... Just what you need!", "https://images.unsplash.com/photo-1511459241548-45c3ca4e07a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-
 var walnut = new Roll("Walnut", "Total: $8.00", "For our \"nutty\" customers!", "https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80");
-
 var oggf = new Roll("The Original (Gluten Free)", "Total: $9.00", "All the great taste of The Original... Now Gluten Free!", "https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-
 var pumpkin = new Roll("Pumpkin Spice", "Total: $10.00", "Spice up fall with Pumpkin Spice", "https://images.unsplash.com/photo-1483288578299-bdb6421dee2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80");
-
 var caramel = new Roll("Caramel Pecan", "Total: $10.00", "Knock Knock!<br> Who's there? <br> Candy! <br> Candy who? <br> Candy Caramel Pecan get any better!?", "https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 
+// cart quantity
 var cartQuant = 0;
 
 // update the information on the product details page depending on what flavor the customer clicked
@@ -138,6 +136,7 @@ function getSelectedQuantity (quantId) {
     document.getElementById("quantDisplay").innerHTML = "Quantity: " + selected;
 };
 
+// Add item to cart quantity displayed on top right every time the Add to Cart button is pressed
 function addToCart() {
     cartQuant+=1;
     document.getElementById("cartQuant").innerHTML = cartQuant;
