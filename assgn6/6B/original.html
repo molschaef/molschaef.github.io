@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>The Original</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <!-- Header and navigation bar -->
+        <div class="header">
+          <a href="index.html" class="logo">Bun Bun Bake Shop</a>
+          <div class="navbar">
+            <a href="index.html" >Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="">Our Story</a>
+            <a href="">Contact</a>
+          </div>
+          <div class="cart">
+            <a href="cart.html"><img src="Cart.png" alt="cart"></a>
+          </div>
+          <div id = "cartQuant">0</div>
+        </div>
+        <div class = "back">
+            <a href="shop.html"><p>&lt; Back to Shop</p></a>
+        </div>
+        <!-- Grid for the flavors at the top of the page -->
+        <div class = "flavor-container">
+            <div class="product-item">
+                <a href="original.html" id="og2" class = "active" onclick="updateProdDetails(this); return false;"><p>The Original</p></a>
+                <img src ="https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"  alt="Original" class = "active" id="og" onclick="updateProdDetails(this); return false;">
+            </div>
+            <div class="product-item">
+                <a href="blackberry.html" id="blackberry2" onclick="updateProdDetails(this); return false;"><p>Blackberry</p></a>
+                <img src ="https://images.unsplash.com/photo-1511459241548-45c3ca4e07a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Blackberry" id="blackberry" onclick="updateProdDetails(this); return false;">
+            </div>
+            <div class="product-item">
+                <a href="walnut.html" id="walnut2" onclick="updateProdDetails(this); return false;"><p>Walnut</p></a>
+                <img src ="https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80" alt="Walnut" id="walnut" onclick="updateProdDetails(this); return false;">
+            </div>
+            <div class="product-item">
+                <a href="gf.html" id="oggf2" onclick="updateProdDetails(this); return false;"><p>Original (GF)</p></a>
+                <img src ="https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="The Original (Gluten Free)" id="oggf" onclick="updateProdDetails(this); return false;">
+            </div>
+            <div class="product-item">
+                <a href="pumpkin.html" id="pumpkin2" onclick="updateProdDetails(this); return false;"><p>Pumpkin Spice</p></a>
+                <img src ="https://images.unsplash.com/photo-1483288578299-bdb6421dee2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80" alt="Pumpkin Spice" id="pumpkin" onclick="updateProdDetails(this); return false;">
+            </div>
+            <div class="product-item">
+                <a href="caramel.html" id="caramel2" onclick="updateProdDetails(this); return false;"><p>Caramel Pecan</p></a>
+                <img src ="https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Caramel Pecan" id="caramel" onclick="updateProdDetails(this); return false;">
+            </div>
+            <!-- <div class = "product-name">
+                <a href="original.html" id="og2" onclick="updateProdDetails(this); return false;"><p>The Original</p></a>
+            </div> -->
+            <!-- <div class = "product-name">
+                <a href="blackberry.html" id="blackberry2" onclick="updateProdDetails(this); return false;"><p>Blackberry</p></a>
+            </div>
+            <div class = "product-name">
+                <a href="walnut.html" id="walnut2" onclick="updateProdDetails(this); return false;"><p>Walnut</p></a>
+            </div>
+            <div class = "product-name">
+                <a href="gf.html" id="oggf2" onclick="updateProdDetails(this); return false;"><p>The Original (Gluten Free)</p></a>
+            </div>
+            <div class = "product-name">
+                <a href="pumpkin.html" id="pumpkin2" onclick="updateProdDetails(this); return false;"><p>Pumpkin Spice</p></a>
+            </div>
+            <div class = "product-name">
+                <a href="caramel.html" id="caramel2" onclick="updateProdDetails(this); return false;"><p>Caramel Pecan</p></a>
+            </div> -->
+        </div>
+            <!-- Grid for the product details on the bottom -->
+            <div class = "prod-details">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Original" id="prodImg">
+                </div>
+                <div>
+                    <div class = "prod-descrip">
+                        <div id = "prodName">The Original</div>
+                        <div id="prodPrice">Total: $7.00</div>
+                        <div id="prodDescrip">Our original recipe!</div>
+                    </div>
+                    <div class = "dropdown">
+                        Glaze:
+                        <select id = "glaze" onchange="getSelectedGlaze('glaze');">
+                            <option value="None">None</option>
+                            <option value="Sugar-milk">Sugar-Milk</option>
+                            <option value="Vanilla-milk">Vanilla-Milk</option>
+                            <option value="Double-chocolate">Double-Chocolate</option>
+                        </select>
+                        <br /><br />Quantity:
+                        <select id="quantity" onchange="getSelectedQuantity('quantity');">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div>Your selection: <br/></div>
+                        <div id="glazeDisplay">Glaze: None<br/></div>
+                        <div id="quantDisplay">Quantity: 1</div>
+                    </div>
+                    <div>
+                        <!-- <a href="cart.html"> --><button type="button" onclick="addToCart()">Add to Cart</button><!-- </a> -->
+                    </div>
+                </div>
+            </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>
