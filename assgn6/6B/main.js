@@ -138,11 +138,39 @@ function getSelectedQuantity (quantId) {
 
 // Add item to cart quantity displayed on top right every time the Add to Cart button is pressed
 function addToCart() {
-    cartQuant+=1;
-    document.getElementById("cartQuant").innerHTML = cartQuant;
+    // update cart quantity
+    updateCartQuant();
+    // update the cart item list
+    addProduct();
+
+
 };
 
+function updateCartQuant() {
+    cartQuant+=1;
+    document.getElementById("cartQuant").innerHTML = cartQuant;
+}
 
+// add the product details to cart page
+function addProduct() {
+    let products = [];
+    var prodImg = document.getElementById("prodImg").src;
+    var flavor = document.getElementById("prodName").innerHTML;
+    var price = document.getElementById("prodPrice").innerHTML;
+    var glaze = document.getElementById("glaze").value;
+    var quant = document.getElementById("quantity").value;
+
+    localStorage.setItem("cart", prodImg);
+    localStorage.setItem("quant", quant);
+
+    products.push(prodImg, flavor, price, glaze, quant)
+
+};
+
+// remove an item from the shopping cart
+function removeItem() {
+
+};
 
 
 
