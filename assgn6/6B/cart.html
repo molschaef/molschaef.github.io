@@ -5,9 +5,9 @@
         <title>Cart</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
-        <script src="main.js"></script>
+        <script src="cart.js"></script>
     </head>
-    <body>
+    <body onload = "updateCart()">
         <!-- Header and navigation bar -->
         <div class="header">
           <a href="index.html" class="logo">Bun Bun Bake Shop</a>
@@ -20,71 +20,17 @@
           <div class="cart">
             <a href="cart.html"><img src="Cart.png" alt="cart"></a>
           </div>
-          <div id = "cartQuant">0</div>
+          <!-- <div id = "cartQuant">0</div> -->
         </div>
 
 
         <!-- Browse page  -->
         <h2>Shopping Cart</h2>    <!-- flavor header -->
-        <div class = "cart-container">
+        <div class = "cart-container" id = "cart-container">
             <div></div>
             <div id="nothing">There is nothing in your cart!</div>
-            <div></div>
-            <div>
-                <button type="button">Checkout</button>
-            </div>
-            <div class="cart-item" id="item1img">
 
-            </div>
-            <div class="cart-item" id="item1txt">
-                <p>
-
-                </p>
-            </div>
-            <div id="item1pr">
-
-            </div>
-            <div class = "cart-item">
-
-            </div>
-            <div class="cart-item" id="item2img">
-
-            </div>
-            <div class="cart-item" id="item2txt">
-                <p>
-
-                </p>
-            </div>
-            <div id="item2pr">
-
-            </div>
-            <div class = "cart-item">
-
-            </div>
-            <div class="cart-item" id="item3img">
-
-            </div>
-            <div class="cart-item" id="item3txt">
-                <p>
-
-                </p>
-            </div>
-            <div id="item3pr">
-
-            </div>
-            <div class = "cart-item">
-
-            </div>
-            <div></div>
-            <div></div>
             <div id = "total">
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>
-                <button type="button">Checkout</button>
             </div>
         </div>
         <div class="footer">

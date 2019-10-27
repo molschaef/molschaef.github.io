@@ -7,15 +7,17 @@ function Roll(flavor, price, description, imgUrl){
 };
 
 // Each flavor cinnamon roll
-var og = new Roll("The Original", "Total: $7.00", "Our original recipe!", "https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-var blackberry = new Roll("Blackberry", "Total: $8.00", "Sweet... Tart... Just what you need!", "https://images.unsplash.com/photo-1511459241548-45c3ca4e07a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-var walnut = new Roll("Walnut", "Total: $8.00", "For our \"nutty\" customers!", "https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80");
-var oggf = new Roll("The Original (Gluten Free)", "Total: $9.00", "All the great taste of The Original... Now Gluten Free!", "https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-var pumpkin = new Roll("Pumpkin Spice", "Total: $10.00", "Spice up fall with Pumpkin Spice", "https://images.unsplash.com/photo-1483288578299-bdb6421dee2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80");
-var caramel = new Roll("Caramel Pecan", "Total: $10.00", "Knock Knock!<br> Who's there? <br> Candy! <br> Candy who? <br> Candy Caramel Pecan get any better!?", "https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+var og = new Roll("The Original", "$7.00", "Our original recipe!", "https://images.unsplash.com/photo-1566217224819-e093a5a0798e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+var blackberry = new Roll("Blackberry", "$8.00", "Sweet... Tart... Just what you need!", "https://images.unsplash.com/photo-1511459241548-45c3ca4e07a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+var walnut = new Roll("Walnut", "$8.00", "For our \"nutty\" customers!", "https://images.unsplash.com/photo-1567890667330-e04cbfd52af3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80");
+var oggf = new Roll("The Original (Gluten Free)", "$9.00", "All the great taste of The Original... Now Gluten Free!", "https://images.unsplash.com/photo-1514509152927-0403a1b6a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+var pumpkin = new Roll("Pumpkin Spice", "$10.00", "Spice up fall with Pumpkin Spice", "https://images.unsplash.com/photo-1483288578299-bdb6421dee2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80");
+var caramel = new Roll("Caramel Pecan", "$10.00", "Knock Knock!<br> Who's there? <br> Candy! <br> Candy who? <br> Candy Caramel Pecan get any better!?", "https://images.unsplash.com/photo-1516455802208-06db096f4b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 
 // cart quantity
 var cartQuant = 0;
+
+let products = localStorage.getItem("cart") == null ? [] : JSON.parse(localStorage.getItem("cart"));
 
 // update the information on the product details page depending on what flavor the customer clicked
 function updateProdDetails(element) {
@@ -153,26 +155,17 @@ function updateCartQuant() {
 
 // add the product details to cart page
 function addProduct() {
-    let products = [];
-    var prodImg = document.getElementById("prodImg").src;
-    var flavor = document.getElementById("prodName").innerHTML;
-    var price = document.getElementById("prodPrice").innerHTML;
-    var glaze = document.getElementById("glaze").value;
-    var quant = document.getElementById("quantity").value;
+    let product = {};
+    product.prodImg = document.getElementById("prodImg").src;
+    product.flavor = document.getElementById("prodName").innerHTML;
+    product.price = document.getElementById("prodPrice").innerHTML;
+    product.glaze = document.getElementById("glaze").value;
+    product.quant = document.getElementById("quantity").value;
 
-    localStorage.setItem("cart", prodImg);
-    localStorage.setItem("quant", quant);
-
-    products.push(prodImg, flavor, price, glaze, quant)
+    products.push(product);
+    localStorage.setItem("cart", JSON.stringify(products));
 
 };
-
-// remove an item from the shopping cart
-function removeItem() {
-
-};
-
-
 
 
 

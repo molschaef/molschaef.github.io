@@ -169,7 +169,7 @@ a {
     border: 1px solid #FF8987;
     margin: 0px;
     align-content: center;
-    filter: grayscale(100%);
+    /*filter: grayscale(100%);*/
 }
 
 /*the selected flavor on the product details page will have a different border from the unselected flavors*/
@@ -334,5 +334,9 @@ button {
 /*change cursor when user hovers over a clickable element*/
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer, .flavor-container {
     cursor: pointer;
+}
+
+#nothing {
+    height: 550px;
 }
 
