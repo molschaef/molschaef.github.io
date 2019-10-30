@@ -164,7 +164,6 @@ function addProduct() {
 
     products.push(product);
     localStorage.setItem("cart", JSON.stringify(products));
-
 };
 
 

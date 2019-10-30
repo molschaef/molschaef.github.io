@@ -14,10 +14,10 @@ function updateCart() {
             // set product id to use for remove function
             product.id = itemNum;
             // add product to html string
-            htmlString += `<div class=\"cart-item\"><img src =\"${product.prodImg}\" alt=\"${product.flavor}\"></div><div class=\"cart-item\"><p>${product.flavor}<br/><br/>Glaze: ${product.glaze}<br/>Quantity: ${product.quant}<br/></p></div><div>$${product.quant*parseInt(product.price.substr(1))}.00</div><div class = \"cart-item\"><a href=\"\" onclick = "removeItem(${product.id})">Remove</a></div>`;
+            htmlString += `<div class=\"cart-item\"><img src =\"${product.prodImg}\" alt=\"${product.flavor}\"></div><div class=\"cart-item\"><p>${product.flavor}<br/><br/>Glaze: ${product.glaze}<br/>Quantity: ${product.quant}<br/></p></div><div>$${product.quant*parseInt(product.price.slice(1))}.00</div><div class = \"cart-item\"><a href=\"\" onclick = "removeItem(${product.id})">Remove</a></div>`;
             itemNum++;
             // add the current product price to the total by removing the $ and converting the string to an int
-            total += (parseInt(product.price.substr(1)))*product.quant;
+            total += (parseInt(product.price.slice(1)))*product.quant;
         }
         // add the html string of products to the grid
         document.getElementById("cart-container").innerHTML = "<div></div><div></div><div></div><div><button type=\"button\">Checkout</button></div>" + htmlString + `<div></div><div></div><div id = \"total\">Total: \$${total}.00</div><div></div>` + "<div></div><div></div><div></div><div><button type=\"button\">Checkout</button></div>";
