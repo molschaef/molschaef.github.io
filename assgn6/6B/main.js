@@ -17,7 +17,21 @@ var caramel = new Roll("Caramel Pecan", "$10.00", "Knock Knock!<br> Who's there?
 // cart quantity
 var cartQuant = 0;
 
-let products = localStorage.getItem("cart") == null ? [] : JSON.parse(localStorage.getItem("cart"));
+let products = setProductsArray();
+
+// Set the products array
+// if there is nothing already in local storage then initialize the array to be empty
+// if there is something in local storage then set the products array to local storage
+function setProductsArray() {
+    if (localStorage.getItem("cart") == null) {
+        return [];
+    } else {
+        return JSON.parse(localStorage.getItem("cart"));
+    }
+};
+
+// Another simplified way to set products array using a ternary operator
+// let products = localStorage.getItem("cart") == null ? [] : JSON.parse(localStorage.getItem("cart"));
 
 // update the information on the product details page depending on what flavor the customer clicked
 function updateProdDetails(element) {
