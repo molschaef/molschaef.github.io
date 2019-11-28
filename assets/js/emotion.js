@@ -15,3 +15,14 @@ var peaceful = new Emotion("peaceful", "sample text", "sample text");
 var overwhelmed = new Emotion("overwhelmed", "sample text", "sample text");
 
 
+var emotions = [happy, sad, loved, lonely, brave, angry, peaceful, overwhelmed];
+
+function createEmotions() {
+    let htmlString = "";
+    for (let emotion of emotions) {
+        //  for reference: htmlString += `<div class=\"cart-item\"><img src =\"${product.prodImg}\" alt=\"${product.flavor}\"></div><div class=\"cart-item\"><p>${product.flavor}<br/><br/>Glaze: ${product.glaze}<br/>Quantity: ${product.quant}<br/></p></div><div>$${product.quant*parseInt(product.price.slice(1))}.00</div><div class = \"cart-item\"><a href=\"\" onclick = "removeItem(${product.id})">Remove</a></div>`;
+        htmlString += '<div class=\"col-sm-3 box\" id= \"' + emotion.name + '\">' + emotion.name + '</div>';
+        console.log(emotion.name);
+    }
+    document.getElementById("emotion-body").innerHTML = htmlString;
+}
