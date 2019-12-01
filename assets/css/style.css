@@ -5,11 +5,10 @@
 body {
     margin: 0;
     font-family: 'Zilla Slab', serif;
-    background-color: #e7e8e2;
+    height: 100%;
 }
 
 .navbar {
-    background-color: #e7e8e2;
     color: white;
 }
 
@@ -58,7 +57,7 @@ p {
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
     background-color: transparent;
-    border-color: #cfbeae;
+    border-color: #e7e8e2;
     border-style: solid;
     color: black;
 }
@@ -68,4 +67,24 @@ p {
   background-color: #cfbeae;
   color: white;
   transform: rotateY(180deg);
+}
+
+/*referenced from https://www.w3schools.com/howto/howto_css_parallax.asp*/
+.parallax {
+  /* The image used */
+  background-image: url("../images/mugbean.png");
+  /*background-color: black;*/
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.block1 {
+    height:1000px;font-size:36px
 }

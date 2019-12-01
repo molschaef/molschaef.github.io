@@ -7,9 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src = "assets/js/emotion.js"></script>
-
-
     <!--jQuery must also be linked for Bootstrap to function-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -20,16 +17,19 @@
     <!-- my css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- my JS -->
+    <script src = "assets/js/emotion.js"></script>
+
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
 
     <!-- p5 library -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script> -->
 
 
     <title>Emotions</title>
   </head>
-  <body onload="createEmotions()">
+  <body onload="createEmotions()" style="background-color: #FBFBFB;">
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -53,8 +53,5 @@
     </nav>
 
     <div class="container" id="emotion-body"></div>
-
-
-
   </body>
 </html>
