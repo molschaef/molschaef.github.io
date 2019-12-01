@@ -6,10 +6,13 @@ body {
     margin: 0;
     font-family: 'Zilla Slab', serif;
     height: 100%;
+    background-color: white;
 }
 
 .navbar {
     color: white;
+    margin: 0px;
+    background-color: #FBF9F9;
 }
 
 .navbar-brand {
@@ -19,6 +22,11 @@ body {
 
 p {
     font-size: 20px;
+}
+
+#emotion-body {
+    margin-top: 30px;
+    background-color: #FBF9F9;
 }
 
 /*Flip card styling referenced from: https://www.w3schools.com/howto/howto_css_flip_card.asp*/
@@ -72,7 +80,7 @@ p {
 /*referenced from https://www.w3schools.com/howto/howto_css_parallax.asp*/
 .parallax {
   /* The image used */
-  background-image: url("../images/mugbean.png");
+  /*background-image: url("../images/mugbean.png");*/
   /*background-color: black;*/
 
   /* Set a specific height */
@@ -83,8 +91,41 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
-.block1 {
-    height:1000px;font-size:36px
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+    min-height: 200px;
+  }
+}
+
+#homeh1 {
+    text-align: center;
+    font-size: 75px;
+}
+
+#homep {
+    text-align: center;
+}
+
+.blocks {
+    height: 500px;
+    background-color: #FBF9F9;
+}
+
+/*images used for parallax*/
+#parallax1 {
+    background-image: url("../images/mugbean.png");
+}
+#parallax2 {
+    background-image: url("../images/mugbean.png");
+}
+#parallax3 {
+    background-image: url("../images/mugbean.png");
+}
+#parallax4 {
+    background-image: url("../images/mugbean.png");
 }
