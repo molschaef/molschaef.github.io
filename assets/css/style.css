@@ -118,6 +118,7 @@ p {
 #parallax5 {
     background-image: url("../images/bluemugbean.png");
 }
+/*end parallax*/
 
 #homeh1 {
     text-align: center;
@@ -129,13 +130,14 @@ p {
 }
 
 .blocks {
-    height: 500px;
+    height: 900px;
     background-color: #FBF9F9;
 }
 
+/*style for the title of each page*/
 .mini-blocks {
     background-color: #FBF9F9;
-    height: 200px;
+    /*height: 200px;*/
 }
 
 /*home page button style*/
@@ -145,6 +147,7 @@ p {
     height: 200px;
 }
 
+/*button styling on home page*/
 .homeButton button {
     height: 40%;
     width: 100%;
@@ -154,11 +157,13 @@ p {
     background-color: white;
 }
 
+/*change color on hover of button*/
 button:hover {
     background-color: #B99AA0;
     color: white;
 }
 
+/*animate coffee beans home page*/
 .homeMug:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 1s;
@@ -180,6 +185,7 @@ button:hover {
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+/*end animate*/
 
 /*styling for emotions page text*/
 .sub-page h1 {
@@ -187,6 +193,24 @@ button:hover {
     text-align: center;
 }
 
-.sub-page p {
+.sub-page h2 {
+    font-size: 36px;
     text-align: center;
+}
+
+.sub-page p {
+    text-align: left;
+}
+
+.flip-card p {
+    text-align: center;
+}
+
+.mini-blocks p {
+    text-align: center;
+}
+
+/*add space on top and bottom of each block of text*/
+.filler {
+    height: 30px;
 }
