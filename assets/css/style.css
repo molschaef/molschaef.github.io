@@ -102,6 +102,23 @@ p {
   }
 }
 
+/*images used for parallax*/
+#parallax1 {
+    background-image: url("../images/mugbean.png");
+}
+#parallax2 {
+    background-image: url("../images/bluemugbean.png");
+}
+#parallax3 {
+    background-image: url("../images/bluemugbean2.png");
+}
+#parallax4 {
+    background-image: url("../images/bluemugbean3.png");
+}
+#parallax5 {
+    background-image: url("../images/bluemugbean.png");
+}
+
 #homeh1 {
     text-align: center;
     font-size: 75px;
@@ -116,18 +133,9 @@ p {
     background-color: #FBF9F9;
 }
 
-/*images used for parallax*/
-#parallax1 {
-    background-image: url("../images/mugbean.png");
-}
-#parallax2 {
-    background-image: url("../images/bluemugbean.png");
-}
-#parallax3 {
-    background-image: url("../images/mugbean.png");
-}
-#parallax4 {
-    background-image: url("../images/mugbean.png");
+.mini-blocks {
+    background-color: #FBF9F9;
+    height: 200px;
 }
 
 /*home page button style*/
@@ -171,4 +179,14 @@ button:hover {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/*styling for emotions page text*/
+.sub-page h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.sub-page p {
+    text-align: center;
 }
