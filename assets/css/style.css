@@ -189,8 +189,9 @@ button:hover {
 
 /*styling for emotions page text*/
 .sub-page h1 {
-    font-size: 50px;
+    font-size: 80px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .sub-page h2 {
