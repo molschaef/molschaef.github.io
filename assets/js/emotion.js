@@ -13,7 +13,7 @@ let loved = new Emotion("Loved", "sample text", "assets/images/loved.png", "#BF9
 let brave = new Emotion("Brave", "sample text", "assets/images/brave.png", "#98DACF");
 // let mad = new Emotion("Mad", "sample text", "sample text", "assets/images/mad.png", "#");
 // let peaceful = new Emotion("Peaceful", "sample text", "sample text", "assets/images/brave.png", "#");
-let overwhelmed = new Emotion("Overwhelmed", "sample text", "assets/images/overwhelmed.png", "#B0C0D6");
+let worried = new Emotion("Worried", "sample text", "assets/images/overwhelmed.png", "#B0C0D6");
 
 // let impatient = new Emotion("Impatient", "sample text", "sample text", "assets/images/brave.png");
 let confused = new Emotion("Confused", "sample text", "assets/images/confused.png", "#BF98A0");
@@ -24,7 +24,7 @@ let friendly = new Emotion("Friendly", "sample text", "assets/images/friendly.pn
 // let worried = new Emotion("Worried", "sample text", "sample text", "../images/sad.png");
 // let silly = new Emotion("Silly", "sample text", "sample text", "../images/sad.png");
 
-let emotions = [brave, confused, curious, excited, friendly, happy, loved, overwhelmed, sad];
+let emotions = [brave, confused, curious, excited, friendly, happy, loved, worried, sad];
 
 // function to create the emotion flip cards
 function createEmotions() {
@@ -66,6 +66,7 @@ $( document ).ready(function() {
     popEmotion();
 });
 
+// populate the emotions in the dropdown
 function popEmotion() {
     let htmlString = "<option value=\"select\">Select an emotion!</option>";
     for (let emotion of emotions) {
@@ -76,17 +77,82 @@ function popEmotion() {
 
 // update the details based on emotion selected
 function getSelectedEmotion (emoSyn) {
-    // let htmlString = "Synonyms for ";
+    let htmlString = "";
     let selected = document.getElementById(emoSyn).value;
-    let htmlString = "Synonyms for " + selected;
+    if (selected === "select") htmlString = "";
+    else htmlString = "Synonyms for " + selected;
     // htmlString += selected;
     $("#emotionDisplay").html(htmlString);
 
-        if (selected === "brave") {
-            for (let i=0; i<brave.synonym.length; i++) {
-                $("#emotionDisplay").append(brave.synonym[i]);
-            }
+    // for each emotion, if it is selected, display the synonym
+    // this could be improved with a loop so i dont have to copy and paste code, and could be scalable for when i add new emotions
+    let synList = "";
+    if (selected === "brave") {
+        for (let i=0; i<brave.synonym.length; i++) {
+            if (i<(brave.synonym.length-1)) synList+= `${brave.synonym[i]}, `;
+            else synList+= `${brave.synonym[i]}`;
         }
+    }
+
+    if (selected === "sad") {
+        for (let i=0; i<sad.synonym.length; i++) {
+            if (i<(sad.synonym.length-1)) synList+= `${sad.synonym[i]}, `;
+            else synList+= `${sad.synonym[i]}`;
+        }
+    }
+
+    if (selected === "loved") {
+        for (let i=0; i<loved.synonym.length; i++) {
+            if (i<(loved.synonym.length-1)) synList+= `${loved.synonym[i]}, `;
+            else synList+= `${loved.synonym[i]}`;
+        }
+    }
+
+    if (selected === "worried") {
+        for (let i=0; i<worried.synonym.length; i++) {
+            if (i<(worried.synonym.length-1)) synList+= `${worried.synonym[i]}, `;
+            else synList+= `${worried.synonym[i]}`;
+        }
+    }
+
+    if (selected === "confused") {
+        for (let i=0; i<confused.synonym.length; i++) {
+            if (i<(confused.synonym.length-1)) synList+= `${confused.synonym[i]}, `;
+            else synList+= `${confused.synonym[i]}`;
+        }
+    }
+
+    if (selected === "curious") {
+        for (let i=0; i<curious.synonym.length; i++) {
+            if (i<(curious.synonym.length-1)) synList+= `${curious.synonym[i]}, `;
+            else synList+= `${curious.synonym[i]}`;
+        }
+    }
+
+    if (selected === "excited") {
+        for (let i=0; i<excited.synonym.length; i++) {
+            if (i<(excited.synonym.length-1)) synList+= `${excited.synonym[i]}, `;
+            else synList+= `${excited.synonym[i]}`;
+        }
+    }
+
+    if (selected === "friendly") {
+        for (let i=0; i<friendly.synonym.length; i++) {
+            if (i<(friendly.synonym.length-1)) synList+= `${friendly.synonym[i]}, `;
+            else synList+= `${friendly.synonym[i]}`;
+        }
+    }
+
+    if (selected === "happy") {
+        for (let i=0; i<happy.synonym.length; i++) {
+            if (i<(happy.synonym.length-1)) synList+= `${happy.synonym[i]}, `;
+            else synList+= `${happy.synonym[i]}`;
+        }
+    }
+    if (selected === "select") {
+        synList = "";
+    }
+    $("#synsDisplay").html(synList);
 };
 
 
