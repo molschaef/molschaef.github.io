@@ -104,13 +104,15 @@ p {
 
 /*images used for parallax*/
 #parallax1 {
-    background-image: url("../images/mugbean.png");
+    /*background-image: url("../images/mugbean.png");*/
+    background-image: url("../images/gap.png");
 }
 #parallax2 {
     background-image: url("../images/bluemugbean.png");
 }
 #parallax3 {
-    background-image: url("../images/bluemugbean2.png");
+    /*background-image: url("../images/bluemugbean2.png");*/
+    background-image: url("../images/gap.png");
 }
 #parallax4 {
     background-image: url("../images/bluemugbean3.png");
