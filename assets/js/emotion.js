@@ -6,27 +6,27 @@ function Emotion(name, example, img, color){
     this.color = color
 };
 
-var happy = new Emotion("Happy", "sample text", "assets/images/happy.png", "#98DACF");
-var sad = new Emotion("Sad", "sample text", "assets/images/sad.png", "#265373");
-var loved = new Emotion("Loved", "sample text", "assets/images/loved.png", "#BF98A0");
-// var lonely = new Emotion("Lonely", "sample text", "sample text", "assets/images/brave.png");
-var brave = new Emotion("Brave", "sample text", "assets/images/brave.png", "#98DACF");
-// var mad = new Emotion("Mad", "sample text", "sample text", "assets/images/mad.png", "#");
-// var peaceful = new Emotion("Peaceful", "sample text", "sample text", "assets/images/brave.png", "#");
-var overwhelmed = new Emotion("Overwhelmed", "sample text", "assets/images/overwhelmed.png", "#B0C0D6");
+let happy = new Emotion("Happy", "sample text", "assets/images/happy.png", "#98DACF");
+let sad = new Emotion("Sad", "sample text", "assets/images/sad.png", "#265373");
+let loved = new Emotion("Loved", "sample text", "assets/images/loved.png", "#BF98A0");
+// let lonely = new Emotion("Lonely", "sample text", "sample text", "assets/images/brave.png");
+let brave = new Emotion("Brave", "sample text", "assets/images/brave.png", "#98DACF");
+// let mad = new Emotion("Mad", "sample text", "sample text", "assets/images/mad.png", "#");
+// let peaceful = new Emotion("Peaceful", "sample text", "sample text", "assets/images/brave.png", "#");
+let overwhelmed = new Emotion("Overwhelmed", "sample text", "assets/images/overwhelmed.png", "#B0C0D6");
 
-// var impatient = new Emotion("Impatient", "sample text", "sample text", "assets/images/brave.png");
-var confused = new Emotion("Confused", "sample text", "assets/images/confused.png", "#BF98A0");
-var curious = new Emotion("Curious", "sample text", "assets/images/curious.png", "#BF98A0");
-var excited = new Emotion("Excited", "sample text", "assets/images/excited.png", "#B0D8F4");
-var friendly = new Emotion("Friendly", "sample text", "assets/images/friendly.png", "#B99AA0");
-// var shy = new Emotion("Shy", "sample text", "sample text", "../images/sad.png");
-// var worried = new Emotion("Worried", "sample text", "sample text", "../images/sad.png");
-// var silly = new Emotion("Silly", "sample text", "sample text", "../images/sad.png");
+// let impatient = new Emotion("Impatient", "sample text", "sample text", "assets/images/brave.png");
+let confused = new Emotion("Confused", "sample text", "assets/images/confused.png", "#BF98A0");
+let curious = new Emotion("Curious", "sample text", "assets/images/curious.png", "#BF98A0");
+let excited = new Emotion("Excited", "sample text", "assets/images/excited.png", "#B0D8F4");
+let friendly = new Emotion("Friendly", "sample text", "assets/images/friendly.png", "#B99AA0");
+// let shy = new Emotion("Shy", "sample text", "sample text", "../images/sad.png");
+// let worried = new Emotion("Worried", "sample text", "sample text", "../images/sad.png");
+// let silly = new Emotion("Silly", "sample text", "sample text", "../images/sad.png");
 
+let emotions = [brave, confused, curious, excited, friendly, happy, loved, overwhelmed, sad];
 
-var emotions = [brave, confused, curious, excited, friendly, happy, loved, overwhelmed, sad];
-
+// function to create the emotion flip cards
 function createEmotions() {
     let htmlString = "";
     for (let emotion of emotions) {
@@ -35,26 +35,30 @@ function createEmotions() {
         htmlString += `<div class=\"flip-card col-sm-6 col-md-4\" id = \" ${emotion.name}\"><div class=\"flip-card-inner col-sm-3\"><div class=\"flip-card-front\"><h2>${emotion.name}</h2><img src=\"${emotion.img}\" alt=\"${emotion.name}\" style=\"width:200px;height:200px;\"></div><div class=\"flip-card-back\" style=\"background-color:${emotion.color}\"><h2>${emotion.name}</h2><p>${emotion.description}</p><p>${emotion.example}</p></div></div></div>`;
     }
     $("#emotion-body").append(htmlString);
-
 };
 
+// function to get the synonyms for each emotion word
 async function synonym() {
     for (let emotion of emotions) {
+        // call the dicstionary API
         const response = await fetch(`https://dictionaryapi.com/api/v3/references/ithesaurus/json/${emotion.name}?key=5373bc69-898f-474a-84c7-080519020af1`);
         const myJson = await response.json();
         emotion.synonym = [];
         for (let word of myJson) {
-            console.log(word.fl);
-            console.log(word.meta.id);
-            if (word.fl === "adjective" && word.meta.id === emotion.name) {
-                emotion.synonym.concat(word.meta.syns[0]);
-                console.log("test");
+            if (word.fl === "adjective" && word.meta.id === emotion.name.toLowerCase()) {
+                emotion.synonym = word.meta.syns[0];
                 console.log(word.meta.syns[0]);
             }
         }
+        // remove the word manful from the brave synonym array
+        // indexOf will find the index of this word in the array. If it finds it, it returns the index. If it does not find it, it returns -1.
+        let index = emotion.synonym.indexOf("manful");
+        // -1 means the index was not found, so we check to make sure manful was found and then remove it
+        if (index != -1) emotion.synonym.splice(index, 1);
     }
 }
 
+// do these things when the page is ready
 $( document ).ready(function() {
     createEmotions();
     synonym();

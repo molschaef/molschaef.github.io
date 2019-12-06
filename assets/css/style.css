@@ -118,6 +118,19 @@ p {
 #parallax5 {
     background-image: url("../images/bluemugbean.png");
 }
+#parallax6 {
+    background-image: url("../images/grounds.png");
+}
+#parallax7 {
+    background-image: url("../images/beans.png");
+}
+#parallax8 {
+    background-image: url("");
+}
+#parallax9 {
+    background-image: url("");
+}
+
 /*end parallax*/
 
 #homeh1 {
@@ -136,8 +149,8 @@ p {
 
 /*style for the title of each page*/
 .mini-blocks {
-    background-color: white;
-    box-shadow: 10px 10px 30px grey;
+ /*   background-color: #FBF9F9;*/
+    /*box-shadow: 10px 10px 30px grey;*/
     /*height: 200px;*/
 }
 
