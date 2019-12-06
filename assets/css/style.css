@@ -104,15 +104,13 @@ p {
 
 /*images used for parallax*/
 #parallax1 {
-    /*background-image: url("../images/mugbean.png");*/
-    background-image: url("../images/gap.png");
+    background-image: url("../images/mugbean.png");
 }
 #parallax2 {
     background-image: url("../images/bluemugbean.png");
 }
 #parallax3 {
-    /*background-image: url("../images/bluemugbean2.png");*/
-    background-image: url("../images/gap.png");
+    background-image: url("../images/bluemugbean2.png");
 }
 #parallax4 {
     background-image: url("../images/bluemugbean3.png");
@@ -126,12 +124,68 @@ p {
 #parallax7 {
     background-image: url("../images/beans.png");
 }
-#parallax8 {
-    background-image: url("");
+
+/* start gap background*/
+#parallax-gap1 {
+    background-image: url("../images/gap.png");
+    height: 300px;
 }
-#parallax9 {
-    background-image: url("");
+#parallax-gap2 {
+    background-image: url("../images/gap.png");
 }
+#parallax-gap3 {
+    background-image: url("../images/gap.png");
+}
+#parallax-gap4 {
+    background-image: url("../images/gap.png");
+}
+#parallax-gap5 {
+    background-image: url("../images/gap.png");
+}
+#parallax-gap6 {
+    background-image: url("../images/gap.png");
+}
+#parallax-gap7 {
+    background-image: url("../images/gap.png");
+}
+#parallax-gap8 {
+    background-image: url("../images/gap.png");
+}
+#parallax-gap9 {
+    background-image: url("../images/gap.png");
+}
+/*end gap bacgkrounds*/
+
+/*start muug backgrounds*/
+#parallax-mug1 {
+    background-image: url("../images/parallax-mug1.png");
+}
+#parallax-mug2 {
+    background-image: url("../images/parallax-mug2.png");
+}
+#parallax-mug3 {
+    background-image: url("../images/parallax-mug3.png");
+}
+#parallax-mug4 {
+    background-image: url("../images/parallax-mug4.png");
+}
+#parallax-mug5 {
+    background-image: url("../images/parallax-mug5.png");
+}
+#parallax-mug6 {
+    background-image: url("../images/parallax-mug6.png");
+}
+#parallax-mug7 {
+    background-image: url("../images/parallax-mug7.png");
+}
+/*#parallax-mug8 {
+    background-image: url("../images/parallax-mug8.png");
+}*/
+#parallax-mug9 {
+    background-image: url("../images/parallax-mug9.png");
+}
+/*end gap bacgkrounds*/
+
 
 /*end parallax*/
 
