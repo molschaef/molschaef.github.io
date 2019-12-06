@@ -62,4 +62,38 @@ async function synonym() {
 $( document ).ready(function() {
     createEmotions();
     synonym();
+    popEmotion();
 });
+
+function popEmotion() {
+    let htmlString = "<option value=\"select\">Select an emotion!</option>";
+    for (let emotion of emotions) {
+        htmlString += `<option value="${emotion.name}">${emotion.name}</option>`;
+    }
+    $("#emoSyn").append(htmlString);
+}
+
+// update the details based on emotion selected
+function getSelectedEmotion (emoSyn) {
+    // let htmlString = "Synonyms for ";
+    let selected = "Synonyms for " + document.getElementById(emoSyn).value;
+    // htmlString += selected;
+    $("#emotionDisplay").html(selected);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

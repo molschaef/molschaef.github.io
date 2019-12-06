@@ -132,27 +132,32 @@ p {
 }
 #parallax-gap2 {
     background-image: url("../images/gap.png");
+    background-color: #EAE1E3;
 }
 #parallax-gap3 {
     background-image: url("../images/gap.png");
 }
 #parallax-gap4 {
     background-image: url("../images/gap.png");
+    background-color: #EAE1E3;
 }
 #parallax-gap5 {
     background-image: url("../images/gap.png");
 }
 #parallax-gap6 {
     background-image: url("../images/gap.png");
+    background-color: #EAE1E3;
 }
 #parallax-gap7 {
     background-image: url("../images/gap.png");
 }
 #parallax-gap8 {
     background-image: url("../images/gap.png");
+    background-color: #EAE1E3;
 }
 #parallax-gap9 {
     background-image: url("../images/gap.png");
+    background-color: #EAE1E3;
 }
 /*end gap bacgkrounds*/
 
@@ -186,7 +191,6 @@ p {
 }
 /*end gap bacgkrounds*/
 
-
 /*end parallax*/
 
 #homeh1 {
@@ -219,6 +223,23 @@ p {
 
 /*button styling on home page*/
 .homeButton button {
+    height: 40%;
+    width: 100%;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: 36px;
+    background-color: white;
+}
+
+/*emotion page button style*/
+.emotionButton {
+    display: inline-block;
+    text-align: center;
+    height: 200px;
+}
+
+/*button styling on home page*/
+.emotionButton button {
     height: 40%;
     width: 100%;
     border-radius: 30px;
@@ -284,4 +305,12 @@ button:hover {
 /*add space on top and bottom of each block of text*/
 .filler {
     height: 30px;
+}
+
+/*dropdown style on emotion page*/
+.dropdown {
+  width: 200px;
+      font-size: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
 }

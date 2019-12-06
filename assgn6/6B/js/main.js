@@ -158,8 +158,6 @@ function addToCart() {
     updateCartQuant();
     // update the cart item list
     addProduct();
-
-
 };
 
 function updateCartQuant() {
