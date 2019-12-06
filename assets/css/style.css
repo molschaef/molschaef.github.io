@@ -136,7 +136,8 @@ p {
 
 /*style for the title of each page*/
 .mini-blocks {
-    background-color: #FBF9F9;
+    background-color: white;
+    box-shadow: 10px 10px 30px grey;
     /*height: 200px;*/
 }
 
