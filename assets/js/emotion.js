@@ -6,23 +6,22 @@ function Emotion(name, example, img, color){
     this.color = color
 };
 
-let happy = new Emotion("Happy", "sample text", "assets/images/happy.png", "#98DACF");
-let sad = new Emotion("Sad", "sample text", "assets/images/sad.png", "#265373");
-let loved = new Emotion("Loved", "sample text", "assets/images/loved.png", "#BF98A0");
-// let lonely = new Emotion("Lonely", "sample text", "sample text", "assets/images/brave.png");
-let brave = new Emotion("Brave", "sample text", "assets/images/brave.png", "#98DACF");
-// let mad = new Emotion("Mad", "sample text", "sample text", "assets/images/mad.png", "#");
-// let peaceful = new Emotion("Peaceful", "sample text", "sample text", "assets/images/brave.png", "#");
-let worried = new Emotion("Worried", "sample text", "assets/images/overwhelmed.png", "#B0C0D6");
-
-// let impatient = new Emotion("Impatient", "sample text", "sample text", "assets/images/brave.png");
-let confused = new Emotion("Confused", "sample text", "assets/images/confused.png", "#BF98A0");
-let curious = new Emotion("Curious", "sample text", "assets/images/curious.png", "#BF98A0");
-let excited = new Emotion("Excited", "sample text", "assets/images/excited.png", "#B0D8F4");
-let friendly = new Emotion("Friendly", "sample text", "assets/images/friendly.png", "#B99AA0");
+let happy = new Emotion("Happy", "Example: Remember when I did [insert something that makes you happy]? That made me really happy because [insert reason]", "assets/images/happy.png", "#265373");
+let sad = new Emotion("Sad", "Example: It can be difficult to feel sad. Sometimes I feel sad too. For example...", "assets/images/sad.png", "#265373");
+let loved = new Emotion("Loved", "Example: ", "assets/images/loved.png", "#265373");
+let brave = new Emotion("Brave", "Example: ", "assets/images/brave.png", "#265373");
+let worried = new Emotion("Worried", "Example: ", "assets/images/overwhelmed.png", "#265373");
+let confused = new Emotion("Confused", "Example: ", "assets/images/confused.png", "#265373");
+let curious = new Emotion("Curious", "Example: ", "assets/images/curious.png", "#265373");
+let excited = new Emotion("Excited", "Example: ", "assets/images/excited.png", "#265373");
+let friendly = new Emotion("Friendly", "Example: ", "assets/images/friendly.png", "#265373");
 // let shy = new Emotion("Shy", "sample text", "sample text", "../images/sad.png");
 // let worried = new Emotion("Worried", "sample text", "sample text", "../images/sad.png");
 // let silly = new Emotion("Silly", "sample text", "sample text", "../images/sad.png");
+// let lonely = new Emotion("Lonely", "sample text", "sample text", "assets/images/brave.png");
+// let impatient = new Emotion("Impatient", "sample text", "sample text", "assets/images/brave.png");
+// let mad = new Emotion("Mad", "sample text", "sample text", "assets/images/mad.png", "#");
+// let peaceful = new Emotion("Peaceful", "sample text", "sample text", "assets/images/brave.png", "#");
 
 let emotions = [brave, confused, curious, excited, friendly, happy, loved, worried, sad];
 
@@ -32,7 +31,7 @@ function createEmotions() {
     for (let emotion of emotions) {
         //  for reference: htmlString += `<div class=\"cart-item\"><img src =\"${product.prodImg}\" alt=\"${product.flavor}\"></div><div class=\"cart-item\"><p>${product.flavor}<br/><br/>Glaze: ${product.glaze}<br/>Quantity: ${product.quant}<br/></p></div><div>$${product.quant*parseInt(product.price.slice(1))}.00</div><div class = \"cart-item\"><a href=\"\" onclick = "removeItem(${product.id})">Remove</a></div>`;
         // htmlString += '<div class=\"col-sm-3 box\" id= \"' + emotion.name + '\">' + emotion.name + '</div>';
-        htmlString += `<div class=\"flip-card col-sm-6 col-md-4\" id = \" ${emotion.name}\"><div class=\"flip-card-inner col-sm-3\"><div class=\"flip-card-front\"><h2>${emotion.name}</h2><img src=\"${emotion.img}\" alt=\"${emotion.name}\" style=\"width:200px;height:200px;\"></div><div class=\"flip-card-back\" style=\"background-color:${emotion.color}\"><h2>${emotion.name}</h2><p>${emotion.description}</p><p>${emotion.example}</p></div></div></div>`;
+        htmlString += `<div class=\"flip-card col-sm-6 col-md-4\" id = \" ${emotion.name}\"><div class=\"flip-card-inner col-sm-3\"><div class=\"flip-card-front\"><h2>${emotion.name}</h2><img src=\"${emotion.img}\" alt=\"${emotion.name}\" style=\"width:200px;height:200px;\"></div><div class=\"flip-card-back\" style=\"background-color:${emotion.color}\"><h2>${emotion.name}</h2><p>${emotion.example}</p></div></div></div>`;
     }
     $("#emotion-body").append(htmlString);
 };
@@ -149,9 +148,13 @@ function getSelectedEmotion (emoSyn) {
             else synList+= `${happy.synonym[i]}`;
         }
     }
+
+    synList+= "</br></br><img src=\"assets/images/MWLogo.png\" alt=\"Merriam-Webster Logo\">";
+
     if (selected === "select") {
-        synList = "";
+        synList = "Select an emotion to discover other ways to help kids name their feelings";
     }
+
     $("#synsDisplay").html(synList);
 };
 

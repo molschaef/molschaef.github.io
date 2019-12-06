@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--jQuery must also be linked for Bootstrap to function-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- my JS -->
+    <script src = "assets/js/emotion.js"></script>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+
+    <!-- p5 library -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script> -->
+
+
+    <title>Feelings Word Generator</title>
+    <link rel="icon" href="assets/images/icon.png">
+  </head>
+  <body style="background-color: #FBF9F9;" class="sub-page">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Espresso Yourself</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="emotions.html">Emotions</a></li>
+            <li class="active"><a href="synonyms.html">Feelings Word Generator<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="parallax" id="parallax2"></div>
+<!--     <div class="container-fluid mini-blocks">
+      <h1>
+        Emotions
+      </h1>
+
+    </div> -->
+    <div class="container-fluid mini-blocks">
+<!--       <div class="row">
+        <div class="col-sm-4"> -->
+          <h1>
+            Feelings Word Generator
+          </h1>
+        </div>
+<!--         </div>
+        <div class="row">
+        <div class="col-sm-4">
+          <p>
+            Explore a few of many words you can use to help kids name their feelings
+          </p>
+        </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="parallax" id="parallax2"></div>
+
+
+    <!-- synonym section -->
+    <div class="container blocks">
+        <div class="row align-items-center">
+          <div class="col-sm-12">
+            <h2>
+              Explore similar words for common emotions
+            </h2>
+          </div>
+        </div>
+      <div class="row align-items-center">
+        <div class="col-sm-12"></div>
+          <div class="col-sm-12 align-items-center">
+              <div class = "dropdown">
+                  <select id = "emoSyn" onchange="getSelectedEmotion('emoSyn');">
+                  </select>
+              </div>
+          </div>
+          <div class="col-sm-12"></div>
+        <div class="row align-items-center">
+              <div class="col-sm-3"></div>
+            <div class="col-sm-6 synBlock">
+              <div><h3 id="emotionDisplay">Select an emotion to discover other ways to help kids name their feelings</h3></div>
+              <div ><p id="synsDisplay"></p></div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+  </div>
+
+    <div class="parallax" id="parallax1"></div>
+
+  </body>
+</html>

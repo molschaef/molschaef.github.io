@@ -203,7 +203,7 @@ p {
 }
 
 .blocks {
-    height: 900px;
+    height: 500px;
     background-color: #FBF9F9;
 }
 
@@ -231,31 +231,15 @@ p {
     background-color: white;
 }
 
-/*emotion page button style*/
-.emotionButton {
-    display: inline-block;
-    text-align: center;
-    height: 200px;
-}
-
-/*button styling on home page*/
-.emotionButton button {
-    height: 40%;
-    width: 100%;
-    border-radius: 30px;
-    margin: 10px;
-    font-size: 36px;
-    background-color: white;
-}
-
 /*change color on hover of button*/
 button:hover {
     background-color: #B99AA0;
     color: white;
 }
 
+
 /*animate coffee beans home page*/
-.homeMug:hover {
+.shake:hover .homeMug{
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 1s;
 
@@ -298,10 +282,6 @@ button:hover {
     text-align: center;
 }
 
-/*.mini-blocks p {
-    text-align: center;
-}*/
-
 /*add space on top and bottom of each block of text*/
 .filler {
     height: 30px;
@@ -309,8 +289,42 @@ button:hover {
 
 /*dropdown style on emotion page*/
 .dropdown {
-  width: 200px;
-      font-size: 20px;
+    width: 200px;
+    font-size: 20px;
     padding-bottom: 20px;
     margin: 0px;
+}
+
+
+h3 {
+  text-align: center;
+}
+
+#emoSyn {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+
+.dropdown  {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.synBlock {
+    text-align: center;
+    border: 2px solid #B99AA0;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+h2 a {
+  color: black;
+}
+
+h2 a:hover {
+  color: #976871;
 }
