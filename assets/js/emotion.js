@@ -39,6 +39,7 @@ function createEmotions() {
 
 // function to get the synonyms for each emotion word
 async function synonym() {
+    // populate the emotion objects with synonyms
     for (let emotion of emotions) {
         // call the dicstionary API
         const response = await fetch(`https://dictionaryapi.com/api/v3/references/ithesaurus/json/${emotion.name}?key=5373bc69-898f-474a-84c7-080519020af1`);
@@ -47,7 +48,7 @@ async function synonym() {
         for (let word of myJson) {
             if (word.fl === "adjective" && word.meta.id === emotion.name.toLowerCase()) {
                 emotion.synonym = word.meta.syns[0];
-                console.log(word.meta.syns[0]);
+                // console.log(word.meta.syns[0]);
             }
         }
         // remove the word manful from the brave synonym array
@@ -68,7 +69,7 @@ $( document ).ready(function() {
 function popEmotion() {
     let htmlString = "<option value=\"select\">Select an emotion!</option>";
     for (let emotion of emotions) {
-        htmlString += `<option value="${emotion.name}">${emotion.name}</option>`;
+        htmlString += `<option value="${emotion.name.toLowerCase()}">${emotion.name}</option>`;
     }
     $("#emoSyn").append(htmlString);
 }
@@ -76,11 +77,17 @@ function popEmotion() {
 // update the details based on emotion selected
 function getSelectedEmotion (emoSyn) {
     // let htmlString = "Synonyms for ";
-    let selected = "Synonyms for " + document.getElementById(emoSyn).value;
+    let selected = document.getElementById(emoSyn).value;
+    let htmlString = "Synonyms for " + selected;
     // htmlString += selected;
-    $("#emotionDisplay").html(selected);
-};
+    $("#emotionDisplay").html(htmlString);
 
+        if (selected === "brave") {
+            for (let i=0; i<brave.synonym.length; i++) {
+                $("#emotionDisplay").append(brave.synonym[i]);
+            }
+        }
+};
 
 
 
