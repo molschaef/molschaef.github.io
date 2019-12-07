@@ -50,7 +50,7 @@
           <ul class="nav navbar-nav">
             <li><a href="emotions.html">Emotions</a></li>
             <li><a href="synonyms.html">Feelings Word Generator </a></li>
-            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="about.html">About <span class="sr-only">(current)</span></a></li>
           </ul>
       </div>
     </nav>
@@ -58,29 +58,39 @@
 
 
     <!--This is the container for the grid in Bootstrap-->
-    <div class="container-fluid blocks">
+    <div class="container-fluid">
         <h1 id="homeh1">
-          Espresso Yourself
+          About
         </h1>
-        <p id="homep">
-          </br>Helping kids put names to their feelings is an important part of development.</br> Use this site as a quick reference for feeling words that are important for kids to learn.
-        </p>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="shake col-md-4">
-                <div class=" homeMug"><img src="assets/images/beansbeans.png" alt="coffee beans"></div>
-                <div class=" homeButton"><button onclick="window.location.href = 'emotions.html';">Explore Emotions</button></div>
-            </div>
-            <div class="shake col-md-4">
-                <div class=" homeMug"><img src="assets/images/beansbeans.png" alt="coffee beans"></div>
-                <div class=" homeButton"><button onclick="window.location.href = 'synonyms.html';">Feelings Word Generator</button></div>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 parallax" id="parallax3"></div>
-        </div>
+    </div>
+    <div class="parallax" id="parallax1"></div>
+
+    <div class="container">
+      <div class="col-md-6 about">
+        <h2>
+          This site is inspired by an interest in increasing emotional wellbeing.</br>
+          According to <a href = "https://kidshelpline.com.au/parents/issues/helping-kids-identify-and-express-feelings" target="_blank">Australia’s Kids Helpline</a> </br></br>Here are some of the many benefits of teaching kids how to identify and express their emotions:
+        </h2>
+        <ul>
+          <li>Improved mental health</li>
+          <li>Increased empathy</li>
+          <li>Higher performance</li>
+          <li>Positive self-esteem</li>
+          <li>Decreased behavioral problems</li>
+        </ul>
+        <h2>
+          If you are interested in learning more, check out this resource from The Center on the Social and Emotional Foundations for Early Learning at Vanderbilt University:</br>
+          <a href = "http://csefel.vanderbilt.edu/documents/teaching_emotions.pdf" target="_blank">Teaching Your Child to: Identify and Express Emotions</a>
+        </h2>
       </div>
+      <div class="col-md-6 about">
+        <img src="assets/images/happy.png">
+      </div>
+    </div>
+
+
+    <div class="col-md-12 parallax" id="parallax3"></div>
+
 
   </body>
 </html>

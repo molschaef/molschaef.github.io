@@ -8,13 +8,13 @@ function Emotion(name, example, img, color){
 
 let happy = new Emotion("Happy", "Example: Remember when I did [insert something that makes you happy]? That made me really happy because [insert reason]", "assets/images/happy.png", "#265373");
 let sad = new Emotion("Sad", "Example: It can be difficult to feel sad. Sometimes I feel sad too. For example...", "assets/images/sad.png", "#265373");
-let loved = new Emotion("Loved", "Example: ", "assets/images/loved.png", "#265373");
-let brave = new Emotion("Brave", "Example: ", "assets/images/brave.png", "#265373");
-let worried = new Emotion("Worried", "Example: ", "assets/images/overwhelmed.png", "#265373");
-let confused = new Emotion("Confused", "Example: ", "assets/images/confused.png", "#265373");
-let curious = new Emotion("Curious", "Example: ", "assets/images/curious.png", "#265373");
-let excited = new Emotion("Excited", "Example: ", "assets/images/excited.png", "#265373");
-let friendly = new Emotion("Friendly", "Example: ", "assets/images/friendly.png", "#265373");
+let loved = new Emotion("Loved", "Example: Remember last Thanksgiving when we were with all our family? I felt very loved then.", "assets/images/loved.png", "#265373");
+let brave = new Emotion("Brave", "Example: When you got your shot at the doctor last week, you were very brave.", "assets/images/brave.png", "#265373");
+let worried = new Emotion("Worried", "Example: Sometimes when I [insert worrying experience you have had], it makes me feel worried. What makes you feel worried?", "assets/images/overwhelmed.png", "#265373");
+let confused = new Emotion("Confused", "Example: The other day when we were walking around the park, we got lost! This left us very confused.", "assets/images/confused.png", "#265373");
+let curious = new Emotion("Curious", "Example: Remember the other day when you wanted to know where you came from? You were feeling curious!", "assets/images/curious.png", "#265373");
+let excited = new Emotion("Excited", "Example: Every time I get to eat ice cream, I feel excited!", "assets/images/excited.png", "#265373");
+let friendly = new Emotion("Friendly", "Example: When you feel like spending time with others, you are feeling friendly.", "assets/images/friendly.png", "#265373");
 // let shy = new Emotion("Shy", "sample text", "sample text", "../images/sad.png");
 // let worried = new Emotion("Worried", "sample text", "sample text", "../images/sad.png");
 // let silly = new Emotion("Silly", "sample text", "sample text", "../images/sad.png");
@@ -152,7 +152,7 @@ function getSelectedEmotion (emoSyn) {
     synList+= "</br></br><img src=\"assets/images/MWLogo.png\" alt=\"Merriam-Webster Logo\">";
 
     if (selected === "select") {
-        synList = "Select an emotion to discover other ways to help kids name their feelings";
+        synList = "Select an emotion above to discover other ways to help kids name their feelings";
     }
 
     $("#synsDisplay").html(synList);
