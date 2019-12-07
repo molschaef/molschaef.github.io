@@ -6,6 +6,7 @@ function Emotion(name, example, img, color){
     this.color = color
 };
 
+// List of emotion objects
 let happy = new Emotion("Happy", "Example: Remember when I did [insert something that makes you happy]? That made me really happy because [insert reason]", "assets/images/happy.png", "#265373");
 let sad = new Emotion("Sad", "Example: It can be difficult to feel sad. Sometimes I feel sad too. For example...", "assets/images/sad.png", "#265373");
 let loved = new Emotion("Loved", "Example: Remember last Thanksgiving when we were with all our family? I felt very loved then.", "assets/images/loved.png", "#265373");
@@ -15,6 +16,8 @@ let confused = new Emotion("Confused", "Example: The other day when we were walk
 let curious = new Emotion("Curious", "Example: Remember the other day when you wanted to know where you came from? You were feeling curious!", "assets/images/curious.png", "#265373");
 let excited = new Emotion("Excited", "Example: Every time I get to eat ice cream, I feel excited!", "assets/images/excited.png", "#265373");
 let friendly = new Emotion("Friendly", "Example: When you feel like spending time with others, you are feeling friendly.", "assets/images/friendly.png", "#265373");
+
+// Additional emotions that could be added later
 // let shy = new Emotion("Shy", "sample text", "sample text", "../images/sad.png");
 // let worried = new Emotion("Worried", "sample text", "sample text", "../images/sad.png");
 // let silly = new Emotion("Silly", "sample text", "sample text", "../images/sad.png");
@@ -23,6 +26,7 @@ let friendly = new Emotion("Friendly", "Example: When you feel like spending tim
 // let mad = new Emotion("Mad", "sample text", "sample text", "assets/images/mad.png", "#");
 // let peaceful = new Emotion("Peaceful", "sample text", "sample text", "assets/images/brave.png", "#");
 
+// array for emotion objects
 let emotions = [brave, confused, curious, excited, friendly, happy, loved, worried, sad];
 
 // function to create the emotion flip cards
@@ -78,7 +82,6 @@ function getSelectedEmotion (emoSyn) {
     let selected = document.getElementById(emoSyn).value;
     if (selected === "select") htmlString = "";
     else htmlString = "Synonyms for " + selected;
-    // htmlString += selected;
     $("#emotionDisplay").html(htmlString);
 
     // for each emotion, if it is selected, display the synonym
@@ -147,12 +150,15 @@ function getSelectedEmotion (emoSyn) {
         }
     }
 
+    // add the Merriam-webster logo
     synList+= "</br></br><img src=\"assets/images/MWLogo.png\" alt=\"Merriam-Webster Logo\">";
 
+    // if they select "select an emotion", it will populate with the following
     if (selected === "select") {
         synList = "Select an emotion above to discover other ways to help kids name their feelings";
     }
 
+    // modify the content to show the synonyms
     $("#synsDisplay").html(synList);
 };
 
