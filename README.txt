@@ -1,3 +1,5 @@
+Assignment 8
+
 Link to website: https://molschaef.github.io/index.html
 
-Please see Assignment8_Schaefer.pdf for the Assignment 8 write-up
+Link to assignment 8 write-up: https://github.com/molschaef/molschaef.github.io/blob/master/Assignment8_Write-up_Schaefer.pdf
